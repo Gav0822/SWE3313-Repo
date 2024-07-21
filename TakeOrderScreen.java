@@ -125,14 +125,4 @@ public class TakeOrderScreen extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
     }
-
-    public static void main(String[] args) {
-        // Create and display the login form
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new TakeOrderScreen().setVisible(true);
-            }
-        });
-    }
 }
