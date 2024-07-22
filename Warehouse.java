@@ -35,14 +35,14 @@ public class Warehouse {
 
     Warehouse() throws FileNotFoundException {
         try {
-            FileInputStream in = new FileInputStream(new File("/Users/Glurp/Downloads"));
+            FileInputStream in = new FileInputStream(new File("MasterProductList.xlsx"));
             HSSFWorkbook workBook=new HSSFWorkbook(in);
             HSSFSheet sheet=workBook.getSheetAt(0);
 
             int counter=0;
             for(Row row: sheet)     //iteration over row using for each loop
             {
-                String status="", description="", vendor="", String, Date="";
+                String status="", description="", vendor="", Date="";
                 int productID=0, onHand=0,sold=0,reserved=0;
                 LocalDate shipment=LocalDate.parse("0000-00-00");
                 int c=0;
