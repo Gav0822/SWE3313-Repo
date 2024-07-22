@@ -69,7 +69,7 @@ public class Warehouse {
                             break;
                         case 14:
                             Date=cell.getStringCellValue();
-                            shipment= LocalDate.parse(Date.substring(0,5)+"-"+Date.substring(5,8)+"-"+Date.substring(8));
+                            shipment= LocalDate.parse(STR."\{Date.substring(0, 5)}-\{Date.substring(5, 8)}-\{Date.substring(8)}");
                             break;
                         case 15:
                             reserved=(int)cell.getNumericCellValue();

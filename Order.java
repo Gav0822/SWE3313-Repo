@@ -34,9 +34,9 @@ public class Order {
     }
 
     public String rawData() {
-        StringBuilder data = new StringBuilder(STR."\{orderID},\{customerID},\{warehouseID},\{PersonnelID}");
+        String data = orderID+","+customerID+","+warehouseID+","+PersonnelID;
         for (Product product : productList) {
-            data.append(STR.",\{product.getProductID()}");
+            data+=","+product.getProductID();
         }
         return data.toString();
     }

@@ -30,10 +30,10 @@ public class LoadAssignment {
     }
 
     public String rawData() {
-        StringBuilder data = new StringBuilder(STR."\{LoadID},\{warehouseID},\{DriverID},\{PersonnelID}");
+        String data = LoadID+","+warehouseID+","+DriverID+","+PersonnelID;
         for (Order order : orderList) {
-            data.append(STR.",\{order.getOrderID()}");
+            data+=","+order.getOrderID();
         }
-        return data.toString();
+        return data;
     }
 }
